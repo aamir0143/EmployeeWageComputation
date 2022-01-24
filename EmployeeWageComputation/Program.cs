@@ -1,6 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System;
-
 namespace EmployeeWageComputation
 {
     class Program
@@ -9,7 +8,7 @@ namespace EmployeeWageComputation
         {
             Console.WriteLine("Welcome To Employee Wage Problems....");
             EmployeeWage employee = new EmployeeWage();
-            employee.DailyEmpWage();//Call the Method.
+            employee.PartTime();//Call the Method.
             Console.ReadLine();
         }
     }
