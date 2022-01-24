@@ -9,7 +9,7 @@ namespace EmployeeWageComputation
         {
             Console.WriteLine("Welcome To Employee Wage Problems....");
             EmployeeWage employee = new EmployeeWage();
-            employee.Attendence();
+            employee.DailyEmpWage();//Call the Method.
             Console.ReadLine();
         }
     }
