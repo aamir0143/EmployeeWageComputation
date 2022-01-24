@@ -8,7 +8,7 @@ namespace EmployeeWageComputation
         {
             Console.WriteLine("Welcome To Employee Wage Problems....");
             EmployeeWage employee = new EmployeeWage();
-            employee.SwitchCase();//Call the Method.
+            employee.MonthlyWage();//Call the Method.
             Console.ReadLine();
         }
     }
