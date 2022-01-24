@@ -8,7 +8,7 @@ namespace EmployeeWageComputation
         {
             Console.WriteLine("Welcome To Employee Wage Problems....");
             EmployeeWage employee = new EmployeeWage();
-            employee.PartTime();//Call the Method.
+            employee.SwitchCase();//Call the Method.
             Console.ReadLine();
         }
     }
