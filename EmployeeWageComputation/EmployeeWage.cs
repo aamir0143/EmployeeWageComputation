@@ -23,11 +23,11 @@ namespace EmployeeWageComputation
         public void  MonthlyWage()  
         {
             //UC 6:Calculating wages till number of working days or total working hours per  month is reached.
-            Random random = new Random();
-            //Computation
-            int empCheck = random.Next(0,3);
             while(totalEmpWage <= MAX_HRS_IN_MONTH && totalWorkingDays < NUM_OF_WORKING_DAYS)
             {
+                Random random = new Random();
+                //Computation.
+                int empCheck = random.Next(0, 3);
                 totalWorkingDays++;
                 switch (empCheck)
                 {
@@ -45,7 +45,6 @@ namespace EmployeeWageComputation
                 //formula for Employee Wage Calculation.
                 totalEmpHrs+= empHrs;
                 Console.WriteLine("Day# : " + totalWorkingDays  + " Emp Hrs : " + empHrs);
-
             }
             totalEmpWage = totalEmpHrs * EMP_RATE_PER_HOUR;
             Console.WriteLine("Total Emp Wage is : " + totalEmpWage);
