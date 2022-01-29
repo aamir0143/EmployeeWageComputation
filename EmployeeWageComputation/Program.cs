@@ -6,9 +6,9 @@ namespace EmployeeWageComputation
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome To Employee Wage Problems....");
-            EmployeeWage employee = new EmployeeWage();
-            employee.MonthlyWage();//Call the Method.
+            Console.WriteLine("==========Welcome To Employee Wage Problems============");
+            EmployeeWage employeeWage = new EmployeeWage();
+            EmployeeWage.ComputeEmpWage();//Call the Method.
             Console.ReadLine();
         }
     }

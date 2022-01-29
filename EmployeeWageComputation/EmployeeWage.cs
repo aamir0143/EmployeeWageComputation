@@ -16,14 +16,14 @@ namespace EmployeeWageComputation
         public const int NUM_OF_WORKING_DAYS = 20;
         public const int MAX_HRS_IN_MONTH = 100;
         //variables
-        int empHrs = 0;
-        int totalEmpHrs = 0;  
-        int totalEmpWage = 0;
-        int totalWorkingDays = 0;
+        public static int empHrs = 0;
+        public static int totalEmpHrs = 0;
+        public static int totalEmpWage = 0;
+        public static int totalWorkingDays = 0;
         //Methods
-        public void  MonthlyWage()  
+        public static int ComputeEmpWage()  
         {
-            while(totalEmpHrs <= MAX_HRS_IN_MONTH && totalWorkingDays < NUM_OF_WORKING_DAYS)
+            while (totalEmpHrs <= MAX_HRS_IN_MONTH && totalWorkingDays < NUM_OF_WORKING_DAYS)
             {
                 totalWorkingDays++;
                 Random random = new Random();
@@ -40,7 +40,6 @@ namespace EmployeeWageComputation
                     default:
                         empHrs = 0;
                         break;
-
                 }
                 //formula for Employee Wage Calculation.
                 totalEmpHrs+= empHrs;
@@ -48,6 +47,7 @@ namespace EmployeeWageComputation
             }
             totalEmpWage = totalEmpHrs * EMP_RATE_PER_HOUR;
             Console.WriteLine("Total Emp Wage is : " + totalEmpWage);
+            return totalEmpWage;
         }
     }
 }
