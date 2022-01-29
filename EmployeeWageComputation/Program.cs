@@ -8,7 +8,8 @@ namespace EmployeeWageComputation
         {
             Console.WriteLine("==========Welcome To Employee Wage Problems============");
             EmployeeWage employeeWage = new EmployeeWage();
-            EmployeeWage.ComputeEmpWage();//Call the Method.
+            EmployeeWage.ComputeEmpWage("DMart", 20, 10, 100);//Call the Method.
+            EmployeeWage.ComputeEmpWage("Relince", 10, 20, 100);
             Console.ReadLine();
         }
     }
