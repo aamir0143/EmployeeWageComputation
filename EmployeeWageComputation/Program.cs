@@ -7,10 +7,12 @@ namespace EmployeeWageComputation
         static void Main(string[] args)
         {
             Console.WriteLine("==========Welcome To Employee Wage Problems============");
-            EmployeeWage employeeWage = new EmployeeWage();
-            EmployeeWage.ComputeEmpWage("DMart", 20, 10, 100);//Call the Method.
-            EmployeeWage.ComputeEmpWage("Relince", 10, 20, 100);
-            EmployeeWage.ComputeEmpWage("Flipkart", 15, 24, 100);
+            EmployeeWage dMart = new EmployeeWage("DMart", 20, 10, 100);
+            EmployeeWage reliance = new EmployeeWage("Reliance", 10, 20, 100);
+            dMart.ComputeEmpWage();
+            Console.WriteLine(dMart.ToString());
+            reliance.ComputeEmpWage();
+            Console.WriteLine(reliance.ToString());
             Console.ReadLine();
         }
     }

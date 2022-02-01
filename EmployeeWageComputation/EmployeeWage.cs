@@ -8,22 +8,32 @@ namespace EmployeeWageComputation
 {
     public class EmployeeWage
     {
-        // Constants
         public const int IS_FULL_TIME = 1;
         public const int IS_PART_TIME = 2;
-        //variables
-        public static int empHrs = 0;
-        public static int totalEmpHrs = 0;
-        public static int totalEmpWage = 0;
-        public static int totalWorkingDays = 0;
-        //Methods
-        public static int ComputeEmpWage(string company, int empRatePerHour, int numOfWorkingDays, int maxHrsInMonth)  
+
+        private string company;
+        private int empRatePerHour;
+        private int numOfWorkingDays;
+        private int maxHrsInMonth;
+        private int totalEmpWage;
+
+        public EmployeeWage(string company, int empRatePerHour, int numOfWorkingDays, int maxHrsInMonth)
         {
-            while (totalEmpHrs <= maxHrsInMonth && totalWorkingDays < numOfWorkingDays)
+            this.company = company;
+            this.empRatePerHour = empRatePerHour;
+            this.numOfWorkingDays = numOfWorkingDays;
+            this.maxHrsInMonth = maxHrsInMonth;
+        }
+
+        public void ComputeEmpWage ()  
+        {
+            //Variables
+            int empHrs = 0, totalEmpHrs = 0, totalWorkingDays = 0;
+            //Computation.
+            while (totalEmpHrs <= this.maxHrsInMonth && totalWorkingDays < this.numOfWorkingDays)
             {
                 totalWorkingDays++;
                 Random random = new Random();
-                //Computation.
                 int empCheck = random.Next(0, 3);
                 switch (empCheck)
                 {
@@ -41,9 +51,12 @@ namespace EmployeeWageComputation
                 Console.WriteLine("Day#:"+ totalWorkingDays +  " Emp Hrs: " + empHrs);
             }
             //formula for Employee Wage Calculation.
-            totalEmpWage = totalEmpHrs * empRatePerHour;
+            totalEmpWage = totalEmpHrs * this.empRatePerHour;
             Console.WriteLine("Total Emp Wage for company " + company +" is: " + totalEmpWage);
-            return totalEmpWage;
+        }
+        public string toString()
+        {
+            return "Total Emp Wage for company " + this.company + " is: " + this.totalEmpWage;
         }
     }
 }
