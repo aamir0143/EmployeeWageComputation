@@ -10,6 +10,7 @@ namespace EmployeeWageComputation
             EmployeeWage employeeWage = new EmployeeWage();
             EmployeeWage.ComputeEmpWage("DMart", 20, 10, 100);//Call the Method.
             EmployeeWage.ComputeEmpWage("Relince", 10, 20, 100);
+            EmployeeWage.ComputeEmpWage("Flipkart", 15, 24, 100);
             Console.ReadLine();
         }
     }
