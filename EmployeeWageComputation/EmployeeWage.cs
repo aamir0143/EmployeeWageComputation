@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EmployeeWageComputation
+namespace EmployeeWageComputation 
 {
     public class EmployeeWage
     {
@@ -52,11 +52,10 @@ namespace EmployeeWageComputation
             }
             //formula for Employee Wage Calculation.
             totalEmpWage = totalEmpHrs * this.empRatePerHour;
-            Console.WriteLine("Total Emp Wage for company " + company +" is: " + totalEmpWage);
         }
-        public string toString()
+        public string toString()  
         {
-            return "Total Emp Wage for company " + this.company + " is: " + this.totalEmpWage;
+            return "The Total Emp Wage for company: " + this.company + " is: " + this.totalEmpWage;
         }
     }
 }
